@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BRAND</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+</head>
+
+<body>
+<!-- ********** <ЗАГОЛОВОК> ********** -->
+<header class="header">
+
+	<!-- ********** <Контейнер для центрирования> ********** -->
+	<div class="container header-container">
+
+		<!-- ********** <Левая часть ЗАГОЛОВКА> ********** -->
+		<div class="header-left header-container__header-left">
+
+			<!-- ********** <ЛОГОТИП> ********** -->
+			<a class="logo" href="index.html">
+				<img src="img/logo.png" alt="logo">
+				<span class="brand text-focus-in">bran<span class="letter-d text-flicker-in-glow">d</span></span>
+			</a>
+			<!-- ********** </ЛОГОТИП> ********** -->
+
+			<!-- ********* <ПОЛЕ ВВОДА С КНОПКАМИ> ********* -->
+
+			<div class="drop-down">
+
+				<details>
+					<summary>
+						<span>Browse</span>
+						<i class="fas fa-caret-down"></i>
+					</summary>
+					<div class="drop-down-browse">
+						<div class="triangle-mega-menu"></div>
+						<div class="mega">
+							<div class="mega-flex">
+								<h4>women</h4>
+								<ul class="mega-menu">
+									<li><a href="#">Dresses</a></li>
+									<li><a href="#">Tops</a></li>
+									<li><a href="#">Sweaters/Knits</a></li>
+									<li><a href="#">Jackets/Coats</a></li>
+									<li><a href="#">Blazers</a></li>
+									<li><a href="#">Denim</a></li>
+									<li><a href="#">Leggings/Pants</a></li>
+									<li><a href="#">Skirts/Shorts</a></li>
+									<li><a href="#">Accessories</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</details>
+			</div>
+
+
+			<form class="search-top" action="#">
+				<input class="search-for-item" type="text" placeholder="Search for Item...">
+				<button class="search-button" type="button">
+					<i class="fas fa-search"></i>
+				</button>
+
+			</form>
+
+			<!-- ********* </ПОЛЕ ВВОДА С КНОПКАМИ> ********* -->
+
+		</div>
+		<!-- ********** </Левая часть ЗАГОЛОВКА> ********** -->
+
+		<!-- ********** <Правая часть ЗАГОЛОВКА> ********** -->
+		<div class="header-right">
+
+			<details>
+
+				<summary>
+					<i class="fas fa-shopping-cart fa-lg"></i>
+				</summary>
+
+				<div class="cart-box-items">
+					<div class="triangle-mega-menu"></div>
+					<div class="product-in-cart">
+						<div class="photo-cart-and-text-cart">
+							<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>
+							<div>
+								<a href="#"><h2>REBOX ZANE</h2></a>
+							</div>
+						</div>
+						<div class="close-boll"><span class="close"></span></div>
+					</div>
+
+					<div class="product-in-cart">
+						<div class="photo-cart-and-text-cart">
+							<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>
+							<div>
+								<a href="#"><h2>REBOX ZANE</h2></a>
+							</div>
+						</div>
+						<div class="close-boll"><span class="close"></span></div>
+					</div>
+
+					<div class="total-cart-product">
+						<h2>total</h2>
+						<h2>$500.00</h2>
+					</div>
+
+					<div class="button-cart-box">
+						<a href="checkout.html">checkout</a>
+						<a href="#">go to cart</a>
+					</div>
+
+				</div>
+
+			</details>
+
+			<div class="my-account">
+
+				<details>
+
+					<summary>
+						<span>My Account</span>
+						<i class="fas fa-caret-down"></i>
+					</summary>
+
+					<div>
+						<ul>
+							<li><a href="checkout.html">user</a></li>
+							<li><a href="checkout.html">log out</a></li>
+						</ul>
+					</div>
+
+				</details>
+
+			</div>
+
+		</div>
+		<!-- ********** </Правая часть ЗАГОЛОВКА> ********** -->
+
+	</div>
+	<!-- ********** </Контейнер для центрирования> ********** -->
+
+</header>
+<!-- ********** </ЗАГОЛОВОК> ********** -->
+
+<!-- ********** <МЕНЮ> ********** -->
+<nav>
+	<!-- Контейнер внутри МЕНЮ для центрирования -->
+	<div class="container container-menu">
+		<ul class="menu">
+			<li><a class="menu-active" href="index.html">Home</a>
+			</li>
+
+			<li><a href="men.html">Men</a>
+				<div class="triangle-mega-menu"></div>
+				<div class="mega">
+
+					<div class="mega-flex">
+						<h4>women</h4>
+						<ul class="mega-menu">
+							<li><a href="#">Dresses</a></li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Sweaters/Knits</a></li>
+							<li><a href="#">Jackets/Coats</a></li>
+							<li><a href="#">Blazers</a></li>
+							<li><a href="#">Denim</a></li>
+							<li><a href="#">Leggings/Pants</a></li>
+							<li><a href="#">Skirts/Shorts</a></li>
+							<li><a href="#">Accessories</a></li>
+						</ul>
+					</div>
+
+					<div class="mega-flex">
+						<h4>women</h4>
+						<ul class="mega-menu second-row-mega">
+							<li><a href="#">Bags/Purses</a></li>
+							<li><a href="#">Swimwear/Underwear</a></li>
+							<li><a href="#">Nightwear</a></li>
+							<li><a href="#">Shoes</a></li>
+						</ul>
+
+						<h4>women</h4>
+						<ul class="mega-menu">
+							<li><a href="#">Dresses</a></li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Sweaters/Knits</a></li>
+						</ul>
+					</div>
+
+					<div class="mega-flex mega-flex-photo">
+						<h4>women</h4>
+						<ul class="mega-menu">
+							<li><a href="#">Dresses</a></li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Sweaters/Knits</a></li>
+							<li><a href="#">Jackets/Coats</a></li>
+						</ul>
+						<div>
+							<a href="#"><img src="img/mega-menu-photo.jpg" alt="man"></a>
+						</div>
+					</div>
+
+				</div>
+			</li>
+
+			<li><a href="single-page.html">Women</a>
+
+			</li>
+
+			<li><a href="shopping-cart.html">Kids</a>
+
+			</li>
+
+			<li><a href="#">Accoseriese</a>
+
+			</li>
+
+			<li><a href="#">Featured</a>
+
+			</li>
+
+			<li><a href="#">Hot Deals</a></li>
+
+		</ul>
+	</div>
+</nav>
+<!-- ********** </МЕНЮ> ********** -->
+
+<!-- ********** <УНИКАЛЬНЫЙ КОНТЕНТ> ********** -->
+<div class="content">
+
+	<!-- ********** <Блок новые поставки> ********** -->
+	<div class="new-arrivals">
+		<div class="container new-arrivals-container">
+			<h2>New Arrivals</h2>
+			<ul>
+				<li><a class="arrivals-default" href="index.html">Home</a></li>
+				<li><a class="arrivals-default" href="men.html">men</a></li>
+				<li><a class="arrivals-active" href="men.html">new arrivals</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- ********** </Блок новые поставки> ********** -->
+
+	<!-- *** <Большой основной блок с меню и товарами> *** -->
+	<div class="new-arrivals-big-block">
+
+		<!-- ******* <Контейнер для центрирования> ******* -->
+		<div class="container new-arrivals-big">
+
+			<!-- **** <Блок меню категории слева> **** -->
+			<nav class="nav-left-menu">
+				<div class="left-menu">
+					<details open>
+						<summary>
+							<span>Category</span>
+							<i class="fas fa-caret-left"></i>
+						</summary>
+						<ul>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Denim</a></li>
+							<li><a href="#">Hoodies & Sweatshirts</a></li>
+							<li><a href="#">Jackets & Coats</a></li>
+							<li><a href="#">Pants</a></li>
+							<li><a href="#">Polos</a></li>
+							<li><a href="#">Shirts</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Shorts</a></li>
+							<li><a href="#">Sweaters & Knits</a></li>
+							<li><a href="#">T-Shirts</a></li>
+							<li><a href="#">Tanks</a></li>
+						</ul>
+					</details>
+				</div>
+
+				<div class="left-menu">
+					<details>
+						<summary>
+							<span>brand</span>
+							<i class="fas fa-caret-left"></i>
+						</summary>
+						<ul>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Denim</a></li>
+							<li><a href="#">Hoodies & Sweatshirts</a></li>
+							<li><a href="#">Jackets & Coats</a></li>
+							<li><a href="#">Pants</a></li>
+							<li><a href="#">Polos</a></li>
+							<li><a href="#">Shirts</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Shorts</a></li>
+							<li><a href="#">Sweaters & Knits</a></li>
+							<li><a href="#">T-Shirts</a></li>
+							<li><a href="#">Tanks</a></li>
+						</ul>
+					</details>
+				</div>
+
+				<div class="left-menu">
+					<details>
+						<summary>
+							<span>designer</span>
+							<i class="fas fa-caret-left"></i>
+						</summary>
+						<ul>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Denim</a></li>
+							<li><a href="#">Hoodies & Sweatshirts</a></li>
+							<li><a href="#">Jackets & Coats</a></li>
+							<li><a href="#">Pants</a></li>
+							<li><a href="#">Polos</a></li>
+							<li><a href="#">Shirts</a></li>
+							<li><a href="#">Shoes</a></li>
+							<li><a href="#">Shorts</a></li>
+							<li><a href="#">Sweaters & Knits</a></li>
+							<li><a href="#">T-Shirts</a></li>
+							<li><a href="#">Tanks</a></li>
+						</ul>
+					</details>
+				</div>
+
+			</nav>
+			<!-- **** </Блок меню категории слева> **** -->
+
+			<!-- ** <Блок для вертикального порядка> ** -->
+			<div class="opcional-flex-direction">
+
+				<!-- **** <Блок Выбора опций> **** -->
+				<div class="opcional-block">
+
+					<!-- **** <Блок Что в Тренде> **** -->
+					<div class="trending-now-choice">
+						<h2>Trending now</h2>
+						<ul>
+							<li><a class="choice-style-child" href="#">Bohemian</a></li>
+							<li><a class="choice-style-child" href="#">Floral</a></li>
+							<li><a href="#">Lace</a></li>
+							<li><a class="choice-style-child" href="#">Floral</a></li>
+							<li><a class="choice-style-child" href="#">Lace</a></li>
+							<li><a href="#">Bohemian</a></li>
+						</ul>
+					</div>
+					<!-- **** </Блок Что в Тренде> **** -->
+
+					<!-- **** <Выбор размера> **** -->
+					<div class="size-choice">
+						<h2>size</h2>
+
+						<form action="#">
+
+							<label for="xxs-checkbox">
+								<input id="xxs-checkbox" type="checkbox"> XXS
+							</label>
+
+							<label for="xs-checkbox">
+								<input id="xs-checkbox" type="checkbox"> XS
+							</label>
+
+							<label for="s-checkbox">
+								<input id="s-checkbox" type="checkbox"> S
+							</label>
+
+							<label for="m-checkbox">
+								<input id="m-checkbox" type="checkbox"> M
+							</label>
+
+							<label for="l-checkbox">
+								<input id="l-checkbox" type="checkbox"> L
+							</label>
+
+							<label for="xl-checkbox">
+								<input id="xl-checkbox" type="checkbox"> XL
+							</label>
+
+							<label for="xxl-checkbox">
+								<input id="xxl-checkbox" type="checkbox"> XXL
+							</label>
+
+						</form>
+
+					</div>
+					<!-- **** </Выбор размера> **** -->
+
+					<!-- **** <Выбор Цены ползунок> **** -->
+					<div class="price-choice">
+						<h2>price</h2>
+						<form action="#">
+
+							<input type="range">
+
+						</form>
+
+					</div>
+					<!-- **** </Выбор Цены ползунок> **** -->
+
+				</div>
+				<!-- **** </Блок Выбора опций> **** -->
+
+				<!-- **** <Выбор Как отсортировать> **** -->
+				<div class="sort-choice">
+
+					<div class="sort-by-button">
+						<button>Sort By</button>
+						<div class="select-name">
+							<select name="#">
+								<option value="#">Name</option>
+								<option value="#">Size</option>
+								<option value="#">Color</option>
+								<option value="#">Price</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="show-button sort-by-button">
+						<button>Show</button>
+						<div class="show-how-much select-name">
+							<select name="#">
+								<option value="#">01</option>
+								<option value="#">02</option>
+								<option value="#">03</option>
+								<option value="#">04</option>
+								<option value="#">05</option>
+								<option value="#">06</option>
+								<option value="#">07</option>
+								<option value="#">08</option>
+								<option value="#">09</option>
+								<option value="#">10</option>
+								<option value="#">11</option>
+								<option value="#">12</option>
+								<option value="#">13</option>
+								<option value="#">14</option>
+								<option value="#">15</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- **** </Выбор Как отсортировать> **** -->
+
+				<!-- **** <Место под мужские товары> **** -->
+				<div class="men-catalog">
+
+					<!-- 1 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-1.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /1 предмет -->
+
+					<!-- 2 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-2.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /2 предмет -->
+
+					<!-- 3 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-3.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /3 предмет -->
+
+					<!-- 4 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-4.png" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /4 предмет -->
+
+					<!-- 5 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-5.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /5 предмет -->
+
+					<!-- 6 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-6.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /6 предмет -->
+
+					<!-- 7 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-7.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /7 предмет -->
+
+					<!-- 8 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-8.jpg" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /8 предмет -->
+
+					<!-- 9 предмет -->
+					<a href="single-page.html">
+						<div class="items">
+							<div class="img-style">
+								<div class="img-style-border">
+									<i class="fas fa-cart-arrow-down"></i>
+									<div class="add-to-cart">Add to Cart</div>
+								</div>
+							</div>
+
+							<img src="img/man-9.png" alt="item-1">
+
+							<div class="items-place-text-style">
+								<h3>Mango People T-shirt</h3>
+								<span>$52.00</span>
+							</div>
+						</div>
+					</a>
+					<!-- /9 предмет -->
+
+				</div>
+				<!-- **** </Место под мужские товары> **** -->
+
+				<!-- *** <Блок выбора страниц и кнопки> *** -->
+				<div class="choise-page-and-button">
+
+					<!-- Выбор страницы -->
+					<div class="border-page-choise">
+						<ul>
+							<li><a href="#">
+								<i class="fas fa-angle-left"></i>
+							</a></li>
+							<li><a href="#"><i class="choise-active">1</i></a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">.....</a></li>
+							<li><a href="#">20</a></li>
+							<li><a href="#">
+								<i class="fas fa-angle-right choise-angle-right"></i>
+							</a></li>
+						</ul>
+					</div>
+					<!-- /Выбор страницы -->
+
+					<!-- Кнопка посмотреть все -->
+					<div class="button-view-all">
+						<a class="border-button-view-all" href="#">
+							<span class="view-all-style">View All</span>
+						</a>
+					</div>
+					<!-- /Кнопка посмотреть все -->
+
+				</div>
+				<!-- *** </Блок выбора страниц и кнопки> *** -->
+
+			</div>
+			<!-- ** <Блок для вертикального порядка> ** -->
+
+		</div>
+		<!-- ******* </Контейнер для центрирования> ******* -->
+
+	</div>
+	<!-- *** </Большой основной блок с меню и товарами> *** -->
+
+	<!-- *** <Блок со скидками страница Мужчины> *** -->
+	<div class="promotions-and-discounts promotions-and-discounts-page-men">
+
+		<div class="container container-promotions-page-men">
+			<div class="promotions-right-side promotions-right-side-page-men">
+
+				<div class="offer-all-functions">
+					<img src="img/free-delivery.svg" alt="delivery">
+					<div class="offer-all-functions-text">
+						<h3>Free Delivery</h3>
+						<span>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</span>
+					</div>
+				</div>
+
+				<div class="offer-all-functions">
+					<img src="img/sales-and-discounts.svg" alt="delivery">
+					<div class="offer-all-functions-text">
+						<h3>Sales & discounts</h3>
+						<span>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</span>
+					</div>
+				</div>
+
+				<div class="offer-all-functions">
+					<img src="img/quality-assurance.svg" alt="delivery">
+					<div class="offer-all-functions-text">
+						<h3>Quality assurance</h3>
+						<span>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- *** </Блок со скидками> *** -->
+
+</div>
+<!-- ********** </УНИКАЛЬНЫЙ КОНТЕНТ> ********** -->
+
+<!-- ********** <ПОДВАЛ> ********** -->
+<footer class="footer">
+
+	<!-- ****<Бокс для основного изоброжения в subscribe блоке>**** -->
+	<div class="img-overlay">
+
+		<!-- ******** <Бокс для маски поверх изоброжения в subscribe блоке> ******** -->
+		<div class="img-bg-footer">
+
+			<!-- ******** <Контейнер для центрирования> ******** -->
+			<div class="container subscribe-container">
+
+				<!-- ******** <Фото + комментарий о товаре> ******** -->
+
+				<!-- ******** <Фото + комментарий о товаре Bootstrap> ******** -->
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+					<!--Слайды-->
+					<div class="carousel-inner">
+
+						<div class="carousel-item active">
+							<div class="face-and-text-together">
+								<img src="img/girl-face-footer.png">
+								<div class="carousel-caption">
+									<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+										condimentum mattis neque sed pretium”</p>
+									<h3>Bin Burhan</h3>
+									<h4>Dhaka, Bd</h4>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<div class="face-and-text-together">
+								<img src="img/gendalf.jpg">
+								<div class="carousel-caption">
+									<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+										condimentum mattis neque sed pretium you shell not pass you shell not pass you shell not pass you shell not pass you shell not pass you shell not pass you shell not pass you shell not pass you shell not pass ”</p>
+									<h3>Bin Burhan</h3>
+									<h4>Dhaka, Bd</h4>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<div class="face-and-text-together">
+								<img src="img/frodo.jpg">
+								<div class="carousel-caption">
+									<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+										condimentum mattis neque sed pretium my darling my darling my darling my darling my darling my darling my darling my darling my darling ”</p>
+									<h3>Bin Burhan</h3>
+									<h4>Dhaka, Bd</h4>
+
+								</div>
+							</div>
+						</div>
+
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						</ol>
+
+					</div>
+					<!--Слайды-->
+
+				</div>
+				<!-- ******** </Фото + комментарий о товаре Bootstrap> ******** -->
+
+				<!-- ******** <Форма для подписки(738)> ******** -->
+				<div class="subscribe-form">
+					<div>
+						<h2>Subscribe</h2>
+						<h3>FOR OUR NEWLETTER AND PROMOTION</h3>
+					</div>
+					<form action="#">
+						<input type="text" placeholder="Enter Your Email">
+						<input type="button" value="Subscribe">
+					</form>
+				</div>
+				<!-- ******** </Форма для подписки> ******** -->
+
+			</div>
+			<!-- ******** </Контейнер для центрирования> ******** -->
+		</div>
+	</div>
+	<!-- ****</Бокс для изоброжения поверх фонового>**** -->
+
+
+	<!-- ******** <Контейнер для центрирования> ******** -->
+	<div class="container info-container">
+
+		<!-- О компании , Информация , Категории -->
+		<div class="brand-info">
+
+			<!-- ******** <О компании блок слева> ******** -->
+			<div class="about-company">
+				<!-- ********** <ЛОГОТИП> ********** -->
+				<a class="logo footer__logo" href="#">
+					<img src="img/logo.png" alt="logo">
+					<span class="brand">bran<span class="letter-d">d</span></span>
+				</a>
+				<!-- ********** </ЛОГОТИП> ********** -->
+
+				<!-- ********** <Текст 1> ********** -->
+				<div class="brand-info-text-1">
+					Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+					multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes
+					and cross-unit partnerships.
+				</div>
+				<!-- ********** </Текст 1> ********** -->
+
+				<!-- ********** <Текст 2> ********** -->
+				<div class="brand-info-text-2">
+					Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives
+					for wireless technologies. Dynamically optimize.
+				</div>
+				<!-- ********** </Текст 2> ********** -->
+			</div>
+			<!-- ******** </О компании блок слева> ******** -->
+
+			<!-- **** <Списки на категории блок справа> **** -->
+			<div class="company-information-shop">
+
+				<div class="company-info">
+					<a href="#">
+						<h2>COMPANY</h2>
+					</a>
+					<ul>
+						<li><a href="index.html">Home </a></li>
+						<li><a href="#">Shop</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">How It Works</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="information-info">
+					<a href="#">
+						<h2>INFORMATION</h2>
+					</a>
+					<ul>
+						<li><a href="#">Tearms & Condition</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">How to Buy</a></li>
+						<li><a href="#">How to Sell</a></li>
+						<li><a href="#">Promotion</a></li>
+					</ul>
+				</div>
+
+				<div class="shop-category">
+					<a href="#">
+						<h2>SHOP CATEGORY</h2>
+					</a>
+					<ul>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Child</a></li>
+						<li><a href="#">Apparel</a></li>
+						<li><a href="#">Brows All</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- **** <Списки на категории блок справа> **** -->
+
+		</div>
+		<!-- /О компании , Информация , Категории -->
+
+	</div>
+	<!-- ******** </Контейнер для центрирования> ******** -->
+
+	<!-- **** <Нижний подвал, Копирайт, соцсети, год> **** -->
+	<div class="lower-footer">
+		<div class="container lower-footer-container">
+
+			<!-- ** Копирайт , год ** -->
+			<div class="lower-footer-left">
+				<span>© 2017  Brand  All Rights Reserved.</span>
+			</div>
+			<!-- ** /Копирайт , год ** -->
+
+			<!-- ***<Боксы ссылки на соцсети>*** -->
+			<div class="lower-footer-right">
+				<ul>
+					<li>
+						<a class="lower-footer-social social-facebook" href="#">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+
+					<li>
+						<a class="lower-footer-social social-twitter" href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+
+					<li>
+						<a class="lower-footer-social social-instagram" href="#">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</li>
+
+					<li>
+						<a class="lower-footer-social social-pinterest" href="#">
+							<i class="fab fa-pinterest-p"></i>
+						</a>
+					</li>
+
+					<li>
+						<a class="lower-footer-social social-google" href="#">
+							<i class="fab fa-google-plus-g"></i>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<!-- ***</Боксы ссылки на соцсети>*** -->
+
+		</div>
+	</div>
+	<!-- **** </Нижний подвал, Копирайт, соцсети, год> **** -->
+
+</footer>
+<!-- ********** </ПОДВАЛ> ********** -->
+
+<!--Scripts-->
+<script src="jquery/jquery-3.0.0.slim.min.js"></script>
+<script src="popper/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<!--Scripts-->
+
+</body>
+
+</html>
