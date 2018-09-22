@@ -1,0 +1,26 @@
+{
+  "accessories": {},
+  "bags": {},
+  "denim": {},
+  "hoodiesAndSweatshirts": {},
+  "jacketsAndCoats": {},
+  "pants": {},
+  "polos": {},
+  "shirts": {},
+  "shoes": {},
+  "shorts": {},
+  "sweatersAndKnits": {},
+  "tShirts": [
+    {
+      "id": "1",
+      "pictureOfGoods": {"pictureMin": "", "pictureMax": ""},
+      "productName": "",
+      "productCategory": "",
+      "productBrand": "",
+      "priceProduct": "",
+      "productColors": [],
+      "productSize": []
+    }
+  ],
+  "tanks": {}
+}
