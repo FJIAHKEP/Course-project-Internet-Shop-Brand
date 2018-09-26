@@ -1,102 +1,131 @@
 "use strict";
 
-// Настройки
-var settings = {
-	// Имя класса обертки изображения
-	imageWrapperClass: "image-wrapper",
-	// Имя класса обертки контейнера с брендом,названием,категорией,ценой
-	productInfoWrapperClass: "items-place-text-style"
-};
+	function Product(id, image, productHref, brandProduct, nameProduct, categoryProduct, priceProduct) {
+		this.id = id; // id продукта
+		this.image = image; // Картинка продукта
+		this.productHref = productHref; // Ссылка на страницу этого продукта
+		this.brandProduct = brandProduct; // Название бренда продукта
+		this.nameProduct = nameProduct; // Имя этого продукта
+		this.categodyProduct = categoryProduct; // Категория этого продукта
+		this.priceProduct = priceProduct; // Цена этого продукта
 
-function Goods(className, id, productBrand, productName, productCategory, priceProduct, image, productInfo) {
+		// Контекст вызова для обработчика событий
+		var self = this;
 
-  // Класс для контейнера
-	this.className = className;
+		var settings = {
+			button_text: 'Add to Cart', // Текст кнопки при наведении
+			div_container_class: 'items', // Класс Основного контейнера карточки товара
+			div_button_wrapper_class: 'img-style', // Класс Обертки для кнопки
+			div_wrapper_text_class: 'items-place-text-style', // Класс Обертки для текста
+			wrapper_button_components_class: 'img-style-border', // Класс Обертки Кнопки Контейнер для тэгов i и div
+			i_button_class: 'fas fa-cart-arrow-down', // Класс для тэга i в кнопке (иконка корзины)
+			div_button_class: 'add-to-cart' // Класс для тэга div в кнопке (отвечает как выглядит текст в кнопке)
+		};
 
-	this.image = image;
-	this.productInfo = productInfo;
+		//TODO Сделать отдельный рендер метод, блок с товарами должен стать массивом что бы товары добавлялись в массив
+		// из базы тянет нужные атрибуты (src картинки, название, цену). И так проходит по всей базе или по куску
+		// базы в json-файле, если кусок задан в url с помощью slice. И на странице рисует полную структуру
 
-	// Атрибуты для контейнера
-	this.id = id;
-	this.productBrand = productBrand;
-	this.productName = productName;
-	this.productCategory = productCategory;
-	this.priceProduct = priceProduct;
-
-}
-
-Goods.prototype.render = function () {
-	// Объявление переменных
-	var container = document.createElement('div');
-	var wrapperImg = document.createElement('div');
-	var productInfoWrapper = document.createElement('div');
-
-	container.className = this.className;
-	wrapperImg.className = settings.imageWrapperClass;
-	productInfoWrapper.className = settings.productInfoWrapperClass;
-
-	// Добавление data атрибутов
-	container.setAttribute("data-id", this.id);
-	container.setAttribute("data-name", this.productName);
-	container.setAttribute("data-category", this.productCategory);
-	container.setAttribute("data-brand", this.productBrand);
-	container.setAttribute("data-price", this.priceProduct);
-
-	// Добавление внутрь основного контейнера
-	container.appendChild(wrapperImg);
-	container.appendChild(productInfoWrapper);
-
-	// Добавление внутрь WrapperImg изображения
-	wrapperImg.appendChild(this.image);
-  // Добавление внутрь ProductInfoWrapper информационного поля
-	productInfoWrapper.appendChild(this.productInfo);
-
-	return container;
-};
-
-function ImageProduct(src) {
-	this.src = src;
-}
-
-ImageProduct.prototype = Object.create(Goods.prototype);
-ImageProduct.prototype.render = function () {
-	var img = document.createElement('img');
-	img.src = this.src;
-
-	return img;
-};
+		var div_container = document.createElement('div'); // Контейнер карточки - контейнер
+		var div_wrapper_img = document.createElement('div'); // Обертка для изоброжения - контейнер
+		var div_wrapper_text = document.createElement('div'); // Обертка для текста - контейнер
+		var button_wrapper = document.createElement('div'); // Обертка для кнопки - контейнер
 
 
+		// Добавление DATA атрибутов главному контейнеру
+		div_container.setAttribute('data-price', this.priceProduct);
 
-function ProductInfoWrapper(className, id, productBrand, productName, productCategory, priceProduct) {
-	Goods.call(this, "", "", productBrand, productName, productCategory, priceProduct);
+		console.log(+div_container.getAttribute('data-price'));
 
-	this.className = className;
-	this.id = id;
-}
+		div_container.appendChild(div_wrapper_img); // Картинка
+		div_container.appendChild(button_wrapper); // Эффект + кнопка
+		div_container.appendChild(div_wrapper_text); // Текст
 
-ProductInfoWrapper.prototype = Object.create(Goods.prototype);
-ProductInfoWrapper.prototype.render = function () {
+		div_container.classList.add(settings.div_container_class);
+		button_wrapper.classList.add(settings.div_button_wrapper_class);
+		div_wrapper_text.classList.add(settings.div_wrapper_text_class);
 
-	var div = document.createElement('div');
-	var divWrapper = document.createElement('div');
-	var divBrand = document.createElement('div');
-	var divGoodsName = document.createElement('div');
-	var divCategory = document.createElement('div');
-	var divPrice = document.createElement('div');
-	var span = document.createElement('span');
+		// Картинка товара
+		var img = new Image;
+		img.src = this.image;
 
-	div.appendChild(divWrapper);
-	divWrapper.appendChild(divBrand);
-	divWrapper.appendChild(divGoodsName);
-	divWrapper.appendChild(divCategory);
-	div.appendChild(span);
-	span.appendChild(divPrice);
+		// Изоброжение положить в контейнер для изоброжения
+		div_wrapper_img.appendChild(img);
+		///////////////////////////////////////////////
 
-	divBrand.textContent = this.productBrand;
-	divGoodsName.textContent = this.productName;
-	divCategory.textContent = this.productCategory;
-	divPrice.textContent = this.priceProduct;
+		// Кнопка появляющаяся при наведении
+		var wrapper_button_components = document.createElement('div'); // Контейнер для тэгов i и div
+		wrapper_button_components.classList.add(settings.wrapper_button_components_class);
 
-	return div;
-};
+		var i = document.createElement('i');
+		i.className = settings.i_button_class;
+
+		var div = document.createElement('div');
+		div.classList.add(settings.div_button_class);
+		div.textContent = settings.button_text; // Текст кнопки
+
+		button_wrapper.appendChild(wrapper_button_components);
+		wrapper_button_components.appendChild(i);
+		wrapper_button_components.appendChild(div);
+
+
+		// Текст карточки товара
+		var brand = document.createElement('a');
+		var name_product = document.createElement('a');
+		var category = document.createElement('a');
+		var price = document.createElement('span');
+		var h3_container = document.createElement('h3');
+
+
+		this.brandProduct = brandProduct; // Название бренда продукта
+		this.nameProduct = nameProduct; // Имя этого продукта
+		this.categodyProduct = categoryProduct; // Категория этого продукта
+		this.priceProduct = priceProduct; // Цена этого продукта
+
+
+		brand.href = '#'; // Ссылка на бренд
+		name_product.href = '#'; // Ссылка на продукты
+		category.href = '#'; // Ссылка на категорию
+
+		brand.textContent = this.brandProduct; // Название бренда
+		name_product.textContent = this.nameProduct; // Имя продукта
+		category.textContent = this.categodyProduct; // Категория товара
+		price.textContent = '$'+this.priceProduct; // Цена товара
+
+		div_wrapper_text.appendChild(h3_container);
+		h3_container.appendChild(brand);
+		h3_container.appendChild(name_product);
+		h3_container.appendChild(category);
+		div_wrapper_text.appendChild(price);
+		////////////////////////////////////////////////
+
+
+
+													    	//СОБЫТИЯ
+//************************************************************************
+		// При нажатии на картинку левой кнопкой мыши открыть ее ссылку
+		div_container.addEventListener('click', function (event) {
+			if(event.target.className === 'img-style') {
+				window.location.href = self.productHref;
+			}
+		});
+
+		// При нажатии на картинку средней кнопкой мыши открыть ее ссылку
+		div_container.addEventListener('mousedown', function (event) {
+			if(event.target.className === 'img-style' && event.which === 2) {
+				window.open(self.productHref, '_blank');
+			}
+		});
+//************************************************************************
+
+			document.querySelector('.items-place').appendChild(div_container);
+
+	}
+
+
+
+
+
+
+
+

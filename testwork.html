@@ -3,71 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+	<script src="js/product.js"></script>
+	<script src="js/ajaxProduct.js"></script>
+
 	<style>
-		#container-goods {
-			display: flex;
+		.container {
+			max-width: 1140px;
+			min-width: 400px;
+			margin: 0 auto;
+			height: 100%;
 		}
 	</style>
-
-	<script src="js/product.js"></script>
-	<script>
-		window.onload = function () {
-
-			//ПРОДУКТ 1
-
-			//className, id, productBrand, productName, productCategory, priceProduct
-			document.getElementById('container-goods').appendChild(
-				new Goods('MyClass','1-id','Mango','People','T-Shirt','52.00',
-				new ImageProduct('img/item-4.png').render(),
-				//productBrand, productName, productCategory, priceProduct
-				new ProductInfoWrapper("","","MANGO", "PEOPLE", "T-SHIRT", "52.00").render()).render());
-
-			//ПРОДУКТ 2
-
-			//className, id, productBrand, productName, productCategory, priceProduct
-			document.getElementById('container-goods').appendChild(
-				new Goods('MyClass','2-id','Mango','People','T-Shirt','52.00',
-					new ImageProduct('img/item-4.png').render(),
-					//productBrand, productName, productCategory, priceProduct
-					new ProductInfoWrapper("","","MANGO", "PEOPLE", "T-SHIRT", "52.00").render()).render());
-
-			//ПРОДУКТ 3
-
-			//className, id, productBrand, productName, productCategory, priceProduct
-			document.getElementById('container-goods').appendChild(
-				new Goods('MyClass','3-id','Mango','People','T-Shirt','52.00',
-					new ImageProduct('img/item-4.png').render(),
-					//productBrand, productName, productCategory, priceProduct
-					new ProductInfoWrapper("","","MANGO", "PEOPLE", "T-SHIRT", "52.00").render()).render());
-
-			//ПРОДУКТ 4
-
-			//className, id, productBrand, productName, productCategory, priceProduct
-			document.getElementById('container-goods').appendChild(
-				new Goods('MyClass','4-id','Mango','People','T-Shirt','52.00',
-					new ImageProduct('img/item-4.png').render(),
-					//productBrand, productName, productCategory, priceProduct
-					new ProductInfoWrapper("","","MANGO", "PEOPLE", "T-SHIRT", "52.00").render()).render());
-
-			//ПРОДУКТ 5
-
-			//className, id, productBrand, productName, productCategory, priceProduct
-			document.getElementById('container-goods').appendChild(
-				new Goods('MyClass','5-id','Mango','People','T-Shirt','52.00',
-					new ImageProduct('img/item-4.png').render(),
-					//productBrand, productName, productCategory, priceProduct
-					new ProductInfoWrapper("","","MANGO", "PEOPLE", "T-SHIRT", "52.00").render()).render());
-
-
-
-		}
-
-	</script>
-
 </head>
 <body>
-	<div id="container-goods">
-
+	<div class="container">
+		<div class="items-place"></div>
 	</div>
+
+	<!--<script>
+		window.onload = function () {
+			//URL IMG, LINK PRODUCT, NAME BRAND, NAME PRODUCT, CATEGORY PRODUCT, PRICE
+			new Product('1','img/items-1.png', 'http://vk.com', 'MANGO','PEOPLE AEE','T-SHIRTAEFE','552.10');
+			new Product('2','img/item-2.png', 'http://vk.com', 'MANGO3 ','PEOPLEAEF','T-SHIRT AEF','1522222.50');
+			new Product('3','img/item-3.png', 'http://vk.com', 'MANGO24 ','PEOPLEAEF','T-SHIRT AEF','11152.050');
+			new Product('4','img/item-4.png', 'http://vk.com', 'MANGO5 ','PEOPLE AEF','T-SHIRTAE F','12.050');
+		}
+	</script>-->
 </body>
 </html>

@@ -13,7 +13,7 @@
   "tShirts": [
     {
       "id": "1",
-      "pictureOfGoods": {"pictureMin": "", "pictureMax": ""},
+      "pictureOfGoods": "img/items-1.png",
       "productName": "",
       "productCategory": "",
       "productBrand": "",
