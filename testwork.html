@@ -7,8 +7,14 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
-	<script src="js/product.js"></script>
-	<script src="js/ajaxProduct.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/product.js" defer></script>
+	<script src="js/ajaxProduct.js" defer></script>
+	<script src="js/ajaxCart.js" defer></script>
+	<script src="js/productBasket.js" defer></script>
+	<script src="js/events.js" defer></script>
+	<script src="js/cart.js" defer></script>
+
 
 	<style>
 		.container {
@@ -20,18 +26,78 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="items-place"></div>
+<div class="header-right" style="position: absolute; right: 150px">
+
+	<details open="">
+
+		<summary>
+			<i class="fas fa-shopping-cart fa-lg"></i>
+		</summary>
+
+		<div class="cart-box-items">
+			<div class="triangle-mega-menu"></div>
+			<div id="cart">
+
+			</div>
+			<!--<div class="product-in-cart">-->
+				<!--<div class="photo-cart-and-text-cart">-->
+					<!--<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>-->
+					<!--<div>-->
+						<!--<a href="#"><h2>REBOX ZANE</h2></a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="close-boll"><span class="close"></span></div>-->
+			<!--</div>-->
+
+			<!--<div class="product-in-cart">-->
+				<!--<div class="photo-cart-and-text-cart">-->
+					<!--<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>-->
+					<!--<div>-->
+						<!--<a href="#"><h2>REBOX ZANE</h2></a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="close-boll"><span class="close"></span></div>-->
+			<!--</div>-->
+
+			<div class="total-cart-product">
+				<h2>total</h2>
+				<h2>$500.00</h2>
+			</div>
+
+			<div class="button-cart-box">
+				<a href="checkout.html">checkout</a>
+				<a href="#">go to cart</a>
+			</div>
+
+		</div>
+
+	</details>
+
+	<div class="my-account">
+
+		<details>
+
+			<summary>
+				<span>My Account</span>
+				<i class="fas fa-caret-down"></i>
+			</summary>
+
+			<div>
+				<ul>
+					<li><a href="checkout.html">user</a></li>
+					<li><a href="checkout.html">log out</a></li>
+				</ul>
+			</div>
+
+		</details>
+
 	</div>
 
-	<!--<script>
-		window.onload = function () {
-			//URL IMG, LINK PRODUCT, NAME BRAND, NAME PRODUCT, CATEGORY PRODUCT, PRICE
-			new Product('1','img/items-1.png', 'http://vk.com', 'MANGO','PEOPLE AEE','T-SHIRTAEFE','552.10');
-			new Product('2','img/item-2.png', 'http://vk.com', 'MANGO3 ','PEOPLEAEF','T-SHIRT AEF','1522222.50');
-			new Product('3','img/item-3.png', 'http://vk.com', 'MANGO24 ','PEOPLEAEF','T-SHIRT AEF','11152.050');
-			new Product('4','img/item-4.png', 'http://vk.com', 'MANGO5 ','PEOPLE AEF','T-SHIRTAE F','12.050');
-		}
-	</script>-->
+</div>
+
+	<div class="container">
+		<div id="goods"></div>
+		<div class="items-place"></div>
+	</div>
 </body>
 </html>
