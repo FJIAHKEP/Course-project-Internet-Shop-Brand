@@ -163,6 +163,7 @@ function buildGoodsList() {
 		buildCart();
 		buildGoodsList();
 
+		// Удаление товара из корзины
 		$('#cart').on('click', '.close-boll', function () {
 			var id = $(this).attr('data-id');
 			var count = $(this).attr('data-quantity');
@@ -194,6 +195,7 @@ function buildGoodsList() {
 			}
 		});
 
+		// Добавление товара в корзину
 		$('#goods').on('click', '.img-style-border', function () {
 			var id = $(this).attr('data-id');
 			var entity = $('#cart').find('[data-id="'+id+'"]');

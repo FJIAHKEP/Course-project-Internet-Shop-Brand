@@ -1,5 +1,44 @@
 {
-  "cart": [],
+  "users": [
+    {
+      "name": "4525",
+      "sex": "мужской",
+      "email": "Treyvin",
+      "phone": "79167289923",
+      "country": "Москва",
+      "id": 1
+    },
+    {
+      "name": "4525",
+      "sex": "мужской",
+      "email": "Treyvin@adafe.ru",
+      "phone": "79167289923",
+      "country": "Москва",
+      "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "quantity": 1,
+      "image": "img/items-1.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": "50.44"
+    },
+    {
+      "id": "5",
+      "quantity": 3,
+      "image": "img/item-5.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": "50.44"
+    }
+  ],
   "goods": [
     {
       "id": "1",

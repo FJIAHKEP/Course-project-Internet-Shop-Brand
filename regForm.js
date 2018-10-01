@@ -10,6 +10,8 @@ var bounceThis = $('.bounce-this-label');
 login.onblur = function () {
 	loginLabel.innerText = "Имя ";
 	if (/^[а-яА-ЯЁa-zA-Z0-9]{3,20}$/.test(login.value)) {
+		console.log(login)
+		console.log(login.value);
 		login.style.borderColor = "green";
 		bounceThis.removeClass('.bounce-this-label-true');
 	} else {
@@ -53,7 +55,7 @@ email.onfocus = function () {
 		email.style.borderColor = "";
 	}
 };
-
+//
 // элементы телефона
 var phone = document.getElementById('phone');
 var phoneLabel = document.getElementById('phoneLabel');
@@ -82,68 +84,68 @@ phone.onfocus = function () {
 		phone.style.borderColor = "";
 	}
 };
+//
+// if (bounceThis.hasClass('.bounce-this-label-true')) {
+// 	$('.bounce-this-label-true').effect( "bounce", "slow" );
+// }
 
-if (bounceThis.hasClass('.bounce-this-label-true')) {
-	$('.bounce-this-label-true').effect( "bounce", "slow" );
-}
-
-function validate() {
-	var validate = document.forms[0];
-	var input = document.getElementsByClassName('input-class');
-	var label = document.getElementsByClassName('lable-form-class');
-	var isEmpty = false;
-
-
-	for (var i = 0; i < input.length; i++) {
-		if (input[i].type === "text") {
-			if (input[i].value === "" || input[i].style.borderColor === "red") {
-				input[i].style.borderColor = "red";
-				isEmpty = true;
-				label[i].innerText = "неверный ввод " + input[i].name;
-			} else {
-				input[i].style.borderColor = "";
-			}
-		}
-	}
-
-	if (isEmpty) {
-	}
-	else {
-		validate.submit();
-		alert('форма отправлена!')
-	}
-}
+// function validate() {
+// 	var validate = document.forms[0];
+// 	var input = document.getElementsByClassName('input-class');
+// 	var label = document.getElementsByClassName('lable-form-class');
+// 	var isEmpty = false;
+//
+//
+// 	for (var i = 0; i < input.length; i++) {
+// 		if (input[i].type === "text") {
+// 			if (input[i].value === "" || input[i].style.borderColor === "red") {
+// 				input[i].style.borderColor = "red";
+// 				isEmpty = true;
+// 				label[i].innerText = "неверный ввод " + input[i].name;
+// 			} else {
+// 				input[i].style.borderColor = "";
+// 			}
+// 		}
+// 	}
+//
+// 	if (isEmpty) {
+// 	}
+// 	else {
+// 		validate.submit();
+// 		alert('форма отправлена!')
+// 	}
+// }
 
 //jqueryUI
 
-$('#date').datepicker({
-	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-	firstDay: 1 });
-
-//////////////////////////////////
-
-
-
-
-$(function () {
-	$.ajax({
-		type: 'GET',
-		url: 'json/cities.json',
-		success: function (newOptions) {
-			var $select = $('#cityList');
-			if ($select.prop) {
-				var options = $select.prop('options');
-			} else {
-				var options = $select.attr('options');
-			}
-			$.each(newOptions, function (key, value) {
-				options[options.length] = new Option(value.cities);
-			});
-		},
-		dataType: 'json',
-		error: function (error) {
-			console.log(error);
-		}
-	});
-});
+// $('#date').datepicker({
+// 	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+// 	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+// 	firstDay: 1 });
+//
+// //////////////////////////////////
+//
+//
+//
+//
+// $(function () {
+// 	$.ajax({
+// 		type: 'GET',
+// 		url: 'json/cities.json',
+// 		success: function (newOptions) {
+// 			var $select = $('#cityList');
+// 			if ($select.prop) {
+// 				var options = $select.prop('options');
+// 			} else {
+// 				var options = $select.attr('options');
+// 			}
+// 			$.each(newOptions, function (key, value) {
+// 				options[options.length] = new Option(value.cities);
+// 			});
+// 		},
+// 		dataType: 'json',
+// 		error: function (error) {
+// 			console.log(error);
+// 		}
+// 	});
+// });
