@@ -1,26 +1,77 @@
 {
-  "cart": [
-
-  ],
+  "cart": [],
   "goods": [
     {
       "id": "1",
-      "name": "T-SHIRT1",
-      "price": 222,
-      "photo": "img/items-1.png"
+      "image": "img/items-1.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 50.44
     },
     {
       "id": "2",
-      "name": "T-SHIRT2",
-      "price": 25,
-      "photo": "img/items-2.png"
+      "image": "img/item-2.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 42.215
     },
     {
       "id": "3",
-      "name": "T-SHIRT3",
-      "price": 55,
-      "photo": "img/items-3.png"
+      "image": "img/item-3.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 12.11
+    },
+    {
+      "id": "4",
+      "image": "img/item-4.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 14.99
+    },
+    {
+      "id": "5",
+      "image": "img/item-5.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 50.44
+    },
+    {
+      "id": "6",
+      "image": "img/item-6.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 42.215
+    },
+    {
+      "id": "7",
+      "image": "img/item-7.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 12.11
+    },
+    {
+      "id": "8",
+      "image": "img/item-8.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": 14.99
     }
-
   ]
 }
