@@ -1,0 +1,356 @@
+@charset "UTF-8"
+
+.line-product-details
+  margin-top: 90px
+  margin-bottom: 20px
+  ul
+    display: flex
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      text-transform: uppercase
+      color: #222222
+      font-size: 13px
+      font-weight: 700
+      line-height: 20px
+      margin-right: 99px
+      &:first-child
+        margin-right: 300px
+      &:last-child
+        margin-right: 0
+
+.selected-products
+  display: flex
+  border-top: 1px solid #eaeaea
+  padding-top: 25px
+  padding-bottom: 25px
+  &:last-child
+    border-bottom: 1px solid #eaeaea
+
+.photo-and-description
+  display: flex
+  width: 35%
+  >img
+    height: 115px
+
+.photo-and-description-color-size-together
+  display: flex
+  flex-direction: column
+  padding: 0 25px 0 25px
+  >h2
+    margin: 13px 0 0 0
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    width: auto
+
+.photo-and-description-color-size
+  margin-top: 38px
+
+.photo-and-description-color-size-box
+  h2
+    margin: 0
+    color:  #575757
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    margin-right: 8px
+  h3
+    margin: 0
+    color:  #6f6e6e
+    font-size: 13px
+    font-weight: 300
+    line-height: 20px
+
+.photo-and-description-color-size-box
+  display: flex
+
+.selected-products-unite-price
+  width: 10%
+  margin-left: 2px
+  display: flex
+  justify-content: center
+  align-items: center
+  >div
+    >h2
+      color: #656565
+      font-size: 13px
+      font-weight: 400
+      line-height: 20px
+      margin: 0
+
+.selected-products-quantity
+  width: 10%
+  margin-left: 54px
+  display: flex
+  justify-content: center
+  align-items: center
+  >input
+    width: 54px
+    height: 30px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #bcbcbc
+    text-align: center
+    outline: none
+
+.selected-products-shipping
+  width: 10%
+  padding: 5px
+  box-sizing: border-box
+  margin-left: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #656565
+  font-size: 13px
+  font-weight: 400
+  line-height: 20px
+  text-align: center
+
+.selected-products-subtotal
+  width: 10%
+  margin-left: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  >div
+    >h2
+      color: #656565
+      font-size: 13px
+      font-weight: 400
+      line-height: 20px
+      margin: 0
+
+.selected-products-action
+  box-sizing: border-box
+  margin-left: 88px
+  display: flex
+  justify-content: flex-end
+  align-items: center
+
+.close-boll
+  position: relative
+  width: 16px
+  height: 16px
+  background: #c0c0c0
+  border-radius: 50%
+  &:hover
+    background: $main-red-pink-color
+    cursor: pointer
+
+//Крестик
+.close
+  position: absolute
+  width: 16px
+  height: 16px
+
+.close:before, .close:after
+  top: 3px
+  position: absolute
+  left: 7px
+  content: ' '
+  height: 10px
+  width: 2px
+  background-color: #ffffff
+
+.close:before
+  transform: rotate(45deg)
+
+.close:after
+  transform: rotate(-45deg)
+
+
+.selected-products-2-button
+  margin-top: 25px
+  margin-bottom: 63px
+  display: flex
+  justify-content: space-between
+
+.selected-products-button-right,
+.selected-products-button-left
+  a
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 235px
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    &:hover
+      background: $main-red-pink-color
+      color: #ffffff
+
+.adress-discount-checkout
+  width: 100%
+  display: flex
+  justify-content: space-between
+  height: auto
+  margin-bottom: 79px
+
+.shipping-adress
+  display: flex
+  flex-direction: column
+  h3
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    margin: 0 0 22px
+  select
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 355px
+    height: 45px
+    outline: none
+    color: #b1b1b1
+    font-size: 13px
+    font-weight: 300
+    padding-left: 18px
+    margin-bottom: 20px
+    option
+      color: #b1b1b1
+      font-size: 13px
+      font-weight: 300
+  input
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 355px
+    height: 45px
+    outline: none
+    color: #b1b1b1
+    font-size: 13px
+    font-weight: 300
+    padding-left: 18px
+    margin-bottom: 20px
+  a
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 100px
+    height: 35px
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 700
+    text-align: left
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    &:hover
+      background: $main-red-pink-color
+      color: #ffffff
+
+.coupon-discount
+  display: flex
+  flex-direction: column
+  h3
+    margin: 0 0 28px
+    text-transform: uppercase
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+  p
+    color: #000000
+    font-size: 14px
+    font-weight: 300
+    margin: 0 0 24px
+  input
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 355px
+    height: 45px
+    outline: none
+    color: #b1b1b1
+    font-size: 13px
+    font-weight: 300
+    padding-left: 18px
+    margin-bottom: 25px
+  a
+    border-style: solid
+    border-width: 1px
+    border-color: #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    width: 100px
+    height: 35px
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 700
+    text-align: left
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    &:hover
+      background: $main-red-pink-color
+      color: #ffffff
+
+.grand-total
+  background-color: #f5f3f3
+  width: 360px
+  height: 214px
+  padding: 40px 43px 42px 44px
+  box-sizing: border-box
+  a
+    background-color: #f16d7f
+    width: 273px
+    height: 50px
+    color:  #ffffff
+    font-size: 16px
+    font-weight: 700
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    margin-top: 17px
+
+
+.sub-total-price
+  display: flex
+  justify-content: flex-end
+  margin-bottom: 14px
+  span
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+    &:last-child
+      margin-left: 20px
+
+.grand-total-price
+  display: flex
+  border-bottom: 1px solid #e2e2e2
+  justify-content: flex-end
+  padding-bottom: 22px
+  h3
+    color:  #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    margin: 0
+  span
+    color:  #f16d7f
+    font-size: 16px
+    font-weight: 700
+    margin-left: 20px

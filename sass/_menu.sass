@@ -1,0 +1,97 @@
+@charset "UTF-8"
+
+/* Меню */
+.container-menu
+  height: 51px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.menu
+  display: flex
+  list-style-type: none
+  margin: 0
+  padding: 0
+  a
+    padding: 19px 24px 19px 24px
+    color: #222222
+    font-size: 14px
+    font-weight: 700
+    text-align: left
+    text-transform: uppercase
+    &:hover
+      color: #f16d7f
+    .menu-active
+      border-bottom: 3px solid #ef5b70
+      padding-bottom: 13px
+  li
+    position: relative
+    &:hover
+      .mega
+        display: flex
+    &:hover
+      .triangle-mega-menu
+        display: block
+
+.triangle-mega-menu
+  width: 10px
+  height: 10px
+  background-color: #ffffff
+  border-top: 1px solid #e8e8e8
+  border-left: 1px solid #e8e8e8
+  position: absolute
+  top: 21px
+  left: 36px
+  z-index: 1
+  transform: rotate(45deg)
+  display: none
+
+.mega
+  z-index: 10
+  border-radius: 5px
+  background-color: #ffffff
+  border: 1px solid #e8e8e8
+  padding: 23px 27px 21px 27px
+  display: none
+  position: absolute
+  top: 26px
+  h4
+    margin: 0
+    padding-bottom: 6px
+    font-size: 14px
+    letter-spacing: 0.4px
+    color: #232323
+    width: 237px
+    border-bottom: 1px solid #e8e8e8
+    text-transform: uppercase
+    margin-bottom: 13px
+
+.mega-flex
+  margin-right: 45px
+  &:last-child
+    margin-right: 0
+
+.mega-flex-photo
+  >div
+    margin-top: 23px
+    >a
+      display: block
+      padding: 0
+
+.second-row-mega
+  margin-bottom: 24px
+
+.mega-menu
+  list-style-type: none
+  padding: 0
+  a
+    font-size: 14px
+    font-weight: 400
+    line-height: 28px
+    letter-spacing: 0.35px
+    color: #646464
+    text-decoration: none
+    padding: 0
+    text-transform: capitalize
+    &:hover
+      color: #f16d7f

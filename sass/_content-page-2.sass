@@ -1,0 +1,388 @@
+@charset "UTF-8"
+
+/* Страница Мужчины 2*/
+
+/* Уникальный контент */
+/* Блок новые поставки */
+.new-arrivals
+  height: 148px
+  background-color: #f8f3f4
+  display: flex
+  align-items: center
+
+.new-arrivals-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 100%
+  h2
+    color: #f16d7f
+    font-size: 24px
+    font-weight: 900
+    line-height: 20px
+    text-transform: uppercase
+    margin: 0
+    padding: 0
+  ul
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    margin: 0
+    padding: 0
+    li
+      color: #636363
+      font-size: 14px
+      font-weight: 300
+      line-height: 20px
+      text-transform: uppercase
+      &:after
+        content: "/"
+        margin: 0 3px 0 3px
+      &:last-child:after
+        content: ""
+
+.arrivals-default
+  color: #636363
+  font-size: 14px
+  font-weight: 300
+  line-height: 20px
+  text-transform: uppercase
+  &:hover
+    color: #f16d7f
+
+.arrivals-active
+  color: #f16d7f
+  font-size: 14px
+  font-weight: 700
+  line-height: 20px
+  pointer-events: none
+
+/* Большой основной блок с меню и товарами */
+.new-arrivals-big
+  display: flex
+  margin-top: 59px
+
+/* Блок меню категории слева */
+.nav-left-menu
+  display: flex
+  flex-direction: column
+
+.left-menu
+  width: 243px
+  min-width: 243px
+  >details[open]
+    >summary
+      >span
+        color: $main-red-pink-color 
+      >i
+        color: $main-red-pink-color
+        transform: rotate(-90deg)
+  > details
+    > summary
+      cursor: pointer
+      border-left: 5px solid #ef5b70
+      border-bottom: 1px solid #ebebeb
+      margin: 9px
+      padding: 8px
+      outline: none
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &::-webkit-details-marker
+        display: none
+      >i
+        transition: 0.5s
+      >span
+        transition: 0.5s
+        text-transform: uppercase
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+    >ul
+      >li
+        list-style-type: none
+        > a
+          display: block
+          text-decoration: none
+          margin: 3px 6px 3px 28px 
+          color: #6f6e6e
+          font-size: 14px
+          font-weight: 400
+          line-height: 33px
+          transition: 0.5s
+          &:hover
+            color: #ef5b70
+
+
+.triangle-left-menu
+  margin: 0
+
+.triangle-left-menu-active
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 0 4.5px 6px 4.5px
+  border-color: transparent transparent #ef5b71 transparent
+  display: none
+
+/* Блок Выбора опций */
+.opcional-flex-direction
+  display: flex
+  flex-direction: column
+
+.opcional-block
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-left: 57px
+  height: 73px
+
+/* Блок Что в Тренде */
+.trending-now-choice
+  width: 176px
+  h2
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    margin: 0 0 24px
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    display: flex
+    flex-wrap: wrap
+    li
+      a
+        color: #6f6e6e
+        font-size: 14px
+        font-weight: 400
+        line-height: 26px
+        &:hover
+          color: #ef5b70
+
+.choice-style-child:after
+  content: " | "
+  margin-left: 9px
+  margin-right: 9px
+  color: #dfdfdf
+  font-size: 14px
+  font-weight: 400
+  line-height: 26px
+
+/* Выбор размера */
+.size-choice
+  margin-left: 65px
+  h2
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    margin: 0 0 27px
+  form
+    display: flex
+    flex-wrap: wrap
+    width: 250px
+    label
+      width: 50px
+      height: 25px
+      font-family: 'Open Sans', sans-serif
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      display: flex
+      align-items: center
+      margin-right: 10px
+      &:nth-child(4)
+        margin: 0
+      input
+        margin-right: 9px
+        &:hover
+          cursor: pointer
+      &:hover
+        cursor: pointer
+
+/* Выбор Цены ползунок */
+.price-choice
+  width: 262px
+  h2
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    margin: 0 0 25px
+  form
+    input[type="range"]
+      width: 100%
+
+/* Выбор Как отсортировать */
+.sort-choice
+  background-color: #f3f3f3
+  width: 848px
+  height: 49px
+  margin-left: 55px
+  margin-top: 41px
+  margin-bottom: 48px
+  display: flex
+  align-items: center
+  padding: 10px
+  box-sizing: border-box
+
+.sort-by-button
+  display: flex
+  button
+    height: 30px
+    background-color: #ffffff
+    outline: none
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    border: 1px solid #ebebeb
+    &:hover
+      cursor: pointer
+
+.select-name
+  >select
+    width: 92px
+    height: 30px
+    border-top: 1px solid #ebebeb
+    border-right: 1px solid #ebebeb
+    border-bottom: 1px solid #ebebeb
+    border-left: none
+    background-color: #ffffff
+    padding-left: 12px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    box-sizing: border-box
+    outline: none
+    &:hover
+      cursor: pointer
+
+.show-button
+  display: flex
+  margin-left: 10px
+
+  .show-how-much
+    >select
+      width: 60px
+      padding-left: 9px
+      box-sizing: border-box
+
+/* Место под мужские товары */
+.men-catalog
+  display: flex
+  margin-left: 55px
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 848px
+
+/* Блок выбора страниц и кнопки */
+.choise-page-and-button
+  display: flex
+  justify-content: space-between
+
+/* Выбор страницы */
+.border-page-choise
+  border-radius: 3px
+  border: 1px solid #ebebeb
+  box-sizing: border-box
+  background-color: #ffffff
+  width: 261px
+  height: 44px
+  display: flex
+  padding-left: 15px
+  padding-right: 15px
+  ul
+    list-style-type: none
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    li
+      margin-right: 18px
+      &:last-child,
+      &:nth-child(7),
+      &:nth-child(8)
+        margin: 0
+      a
+        color: #c4c4c4
+        font-size: 16px
+        font-weight: 300
+        line-height: 26px
+        &:hover
+          color: #ef5b70
+
+.choise-active
+  color: #ef5b70
+  font-size: 16px
+  font-weight: 300
+  line-height: 26px
+
+.choise-angle-right
+  color: #ef5b70
+  font-size: 16px
+  font-weight: 300
+  line-height: 26px
+
+/* Кнопка посмотреть все */
+.border-button-view-all
+  border-radius: 3px
+  border: 1px solid #ef5b70
+  box-sizing: border-box
+  background-color: #ffffff
+  width: 150px
+  height: 44px
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    background: #ef5b70
+    .view-all-style
+      color: #ffffff
+  span
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 300
+    line-height: 26px
+
+/* Блок со скидками страница Мужчины*/
+.promotions-and-discounts-page-men
+  margin: 0
+  width: auto
+  margin-top: 110px
+
+
+.container-promotions-page-men
+  display: flex
+
+.promotions-right-side-page-men
+  padding: 89px 0 114px 0
+  flex-direction: row
+  width: 100%
+  justify-content: space-between
+  align-items: flex-start
+  >.offer-all-functions
+    flex-direction: column
+    justify-content: center
+    width: 309px
+    margin: 0
+    >img
+      height: auto
+      width: auto
+    >.offer-all-functions-text
+      text-align: center
+      margin: 0
+      >h3
+        margin-top: 32px
+        display: flex
+        justify-content: center
+      >span
+        text-align: center
+
