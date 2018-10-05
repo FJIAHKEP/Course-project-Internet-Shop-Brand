@@ -129,7 +129,7 @@ $('#date').datepicker({
 $(function () {
 	$.ajax({
 		type: 'GET',
-		url: 'cities.json',
+		url: 'json/cities.json',
 		success: function (newOptions) {
 			var $select = $('#cityList');
 			if ($select.prop) {
