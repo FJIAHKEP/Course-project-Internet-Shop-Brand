@@ -12,6 +12,26 @@ function buildRegForm() {
 		id: 'form'
 	});
 
+	// Кнопка закрытия
+	var $close = $('<div />', {
+		text: 'x',
+		id: 'close-form-btn'
+	});
+
+	$close.css({
+		position: 'absolute',
+		right: '18px',
+		top: '16px',
+		cursor: 'pointer'
+	});
+
+	$($wrapperForm,$close).on('click', function (event) {
+		if (event.target.id === 'wrapper-form' || event.target.id === 'close-form-btn'){
+			$wrapperForm.remove();
+		}
+	});
+
+
 	// Имя
 	var $name = $('<div />');
 	$name.append(
@@ -147,7 +167,7 @@ function buildRegForm() {
 
 	// Итог render
 	$wrapperForm.append($form);
-	$form.append($name, $gender, $email, $phone, $country, $password, $button);
+	$form.append($close, $name, $gender, $email, $phone, $country, $password, $button);
 	$('body').append($wrapperForm);
 
 	$("#user-phone").inputmask("+7(999)999-99-99");
@@ -289,46 +309,48 @@ function validateRegForm() {
 
 (function ($) {
 	$(function () {
-		buildRegForm();
-		validateRegForm();
-		var $name = $('#user-name');
-		var $email = $('#user-email');
-		var $password1 = $('#user-password');
-		var $password2 = $('#user-password-return');
+		$('#goods').on('click', function () {
+			buildRegForm();
+			validateRegForm();
+			var $name = $('#user-name');
+			var $email = $('#user-email');
+			var $password1 = $('#user-password');
+			var $password2 = $('#user-password-return');
 
-		$('#form').on('submit', function (event) {
-			event.preventDefault();
-			if ($name.attr('data-valid') === 'true' &&
-				$email.attr('data-valid') === 'true' &&
-				$password1.attr('data-valid') === 'true' &&
-				$password2.attr('data-valid') === 'true') {
-				$.ajax({
-					url: 'http://localhost:3000/users',
-					type: 'POST',
-					headers: {
-						'content-type': 'application/json'
-					},
-					data: JSON.stringify({
-						name: $('#user-name[name]').val(),
-						sex: $('#gender>label>input[name = "sex"]:checked').val(),
-						email: $('#user-email[name]').val(),
-						phone: $('#user-phone[name]').val(),
-						city: $('#user-city[name]').val(),
-						'user-password': $('#user-password[name]').val()
-					}),
-					success: function () {
-						alert("спасибо ");
-						$('#wrapper-form').remove();
-					}
-				})
-			} else if ($name.attr('data-valid') === 'false' || $name.attr('data-valid') === undefined &&
-				$email.attr('data-valid') === 'false' || $email.attr('data-valid') === undefined &&
-				$password1.attr('data-valid') === 'false' || $password1.attr('data-valid') === undefined &&
-				$password2.attr('data-valid') === 'false' || $password2.attr('data-valid') === undefined) {
-				$('[data-get]').css({
-					border: '2px solid red'
-				});
-			}
+			$('#form').on('submit', function (event) {
+				event.preventDefault();
+				if ($name.attr('data-valid') === 'true' &&
+					$email.attr('data-valid') === 'true' &&
+					$password1.attr('data-valid') === 'true' &&
+					$password2.attr('data-valid') === 'true') {
+					$.ajax({
+						url: 'http://localhost:3000/users',
+						type: 'POST',
+						headers: {
+							'content-type': 'application/json'
+						},
+						data: JSON.stringify({
+							name: $('#user-name[name]').val(),
+							sex: $('#gender>label>input[name = "sex"]:checked').val(),
+							email: $('#user-email[name]').val(),
+							phone: $('#user-phone[name]').val(),
+							city: $('#user-city[name]').val(),
+							userPassword: $('#user-password[name]').val()
+						}),
+						success: function () {
+							alert("Регистрация прошла успешно!");
+							$('#wrapper-form').remove();
+						}
+					})
+				} else if ($name.attr('data-valid') === 'false' || $name.attr('data-valid') === undefined &&
+					$email.attr('data-valid') === 'false' || $email.attr('data-valid') === undefined &&
+					$password1.attr('data-valid') === 'false' || $password1.attr('data-valid') === undefined &&
+					$password2.attr('data-valid') === 'false' || $password2.attr('data-valid') === undefined) {
+					$('[data-get]').css({
+						border: '2px solid red'
+					});
+				}
+			});
 		});
 	})
 })(jQuery);

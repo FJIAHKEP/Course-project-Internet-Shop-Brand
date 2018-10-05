@@ -298,6 +298,7 @@ a:hover {
   margin-right: 2px; }
 
 .cart-box-items {
+  z-index: 2;
   margin-top: 13px;
   margin-left: -19px;
   box-sizing: border-box;
@@ -2367,10 +2368,12 @@ a:hover {
   align-items: center; }
 
 #form {
+  position: relative;
   border: 2px solid silver;
   padding: 30px;
   border-radius: 5%;
-  background: #f16d7f;
+  background: #f16d7f url("../img/background-form.png") no-repeat;
+  background-size: cover;
   width: 367px;
   transition: 1s linear; }
   #form div span {
@@ -2386,6 +2389,7 @@ a:hover {
     background: #e6e6e6;
     outline: none;
     border: 2px solid #e6e6e6;
+    border-radius: 10px;
     margin-bottom: 15px; }
     #form div input:focus, #form div select:focus {
       box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.05);

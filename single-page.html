@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery/jquery.inputmask.js"></script>
+	<script src="js/cart.js"></script>
+	<!-- <script src="js/registrationForm.js"></script> -->
 </head>
 
 <body>
@@ -74,70 +78,44 @@
 		<!-- ********** </Левая часть ЗАГОЛОВКА> ********** -->
 
 		<!-- ********** <Правая часть ЗАГОЛОВКА> ********** -->
-		<div class="header-right">
-
+		<!-- ********** <КОРЗИНА ТОВАРОВ> ********** -->
+		<div class="header-right" style="position: relative">
+			<div id="ballWithACounter">0</div>
 			<details>
-
 				<summary>
 					<i class="fas fa-shopping-cart fa-lg"></i>
 				</summary>
-
 				<div class="cart-box-items">
 					<div class="triangle-mega-menu"></div>
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
-					</div>
+					<!-- Сюда вставляем товары корзины -->
+					<div id="cart">
 
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
 					</div>
-
+					<!-- Сюда вставляем общую сумму товаров -->
 					<div class="total-cart-product">
 						<h2>total</h2>
-						<h2>$500.00</h2>
+						<h2 id="renderPrice"></h2>
 					</div>
-
 					<div class="button-cart-box">
 						<a href="checkout.html">checkout</a>
-						<a href="#">go to cart</a>
+						<a href="shopping-cart.html">go to cart</a>
 					</div>
-
 				</div>
-
 			</details>
-
 			<div class="my-account">
-
 				<details>
-
 					<summary>
 						<span>My Account</span>
 						<i class="fas fa-caret-down"></i>
 					</summary>
-
 					<div>
 						<ul>
 							<li><a href="checkout.html">user</a></li>
 							<li><a href="checkout.html">log out</a></li>
 						</ul>
 					</div>
-
 				</details>
-
 			</div>
-
 		</div>
 		<!-- ********** </Правая часть ЗАГОЛОВКА> ********** -->
 
@@ -690,7 +668,6 @@
 <!-- ********** </ПОДВАЛ> ********** -->
 
 <!--Scripts-->
-<script src="jquery/jquery-3.0.0.slim.min.js"></script>
 <script src="popper/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <!--Scripts-->

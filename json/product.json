@@ -1,25 +1,48 @@
 {
+  "authorization": [],
   "users": [
-    {
-      "name": "123123123",
-      "sex": "женский",
-      "email": "dim4ii@yandex.ru",
-      "phone": "+7(123)123-12-31",
-      "city": "Москва",
-      "user-password": "123123",
-      "id": 1
-    },
     {
       "name": "Dimitry",
       "sex": "мужской",
       "email": "dim4ii@yandex.ru",
-      "phone": "",
-      "city": "Санкт-Питербург",
-      "user-password": "123123",
-      "id": 2
+      "phone": "+7(444)444-44-44",
+      "city": "Москва",
+      "userPassword": "123123",
+      "id": 1
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "1",
+      "quantity": 1,
+      "image": "img/items-1.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": "50.44"
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "image": "img/item-2.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": "42.215"
+    },
+    {
+      "id": "3",
+      "quantity": 1,
+      "image": "img/item-3.png",
+      "productHref": "#",
+      "brandProduct": "Brand",
+      "nameProduct": "Name",
+      "categodyProduct": "T-SHiRT",
+      "priceProduct": "12.11"
+    }
+  ],
   "goods": [
     {
       "id": "1",
@@ -96,6 +119,8 @@
   ],
   "cities": [
     "Москва",
-    "Санкт-Питербург"
+    "Санкт-Питербург",
+    "12312",
+    "afebe"
   ]
 }

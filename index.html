@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery/jquery.inputmask.js"></script>
+	<script src="js/cart.js"></script>
+	<!-- <script src="js/registrationForm.js"></script> -->
 </head>
 
 <body>
@@ -70,70 +74,44 @@
 			<!-- ********** </Левая часть ЗАГОЛОВКА> ********** -->
 
 			<!-- ********** <Правая часть ЗАГОЛОВКА> ********** -->
-			<div class="header-right">
-
+			<!-- ********** <КОРЗИНА ТОВАРОВ> ********** -->
+			<div class="header-right" style="position: relative">
+				<div id="ballWithACounter">0</div>
 				<details>
-
 					<summary>
 						<i class="fas fa-shopping-cart fa-lg"></i>
 					</summary>
-
 					<div class="cart-box-items">
 						<div class="triangle-mega-menu"></div>
-						<div class="product-in-cart">
-							<div class="photo-cart-and-text-cart">
-								<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>
-								<div>
-									<a href="#"><h2>REBOX ZANE</h2></a>
-								</div>
-							</div>
-							<div class="close-boll"><span class="close"></span></div>
-						</div>
+						<!-- Сюда вставляем товары корзины -->
+						<div id="cart">
 
-						<div class="product-in-cart">
-							<div class="photo-cart-and-text-cart">
-								<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>
-								<div>
-									<a href="#"><h2>REBOX ZANE</h2></a>
-								</div>
-							</div>
-							<div class="close-boll"><span class="close"></span></div>
 						</div>
-
+						<!-- Сюда вставляем общую сумму товаров -->
 						<div class="total-cart-product">
 							<h2>total</h2>
-							<h2>$500.00</h2>
+							<h2 id="renderPrice"></h2>
 						</div>
-
 						<div class="button-cart-box">
 							<a href="checkout.html">checkout</a>
-							<a href="#">go to cart</a>
+							<a href="shopping-cart.html">go to cart</a>
 						</div>
-
 					</div>
-
 				</details>
-
 				<div class="my-account">
-
 					<details>
-
 						<summary>
 							<span>My Account</span>
 							<i class="fas fa-caret-down"></i>
 						</summary>
-
 						<div>
 							<ul>
 								<li><a href="checkout.html">user</a></li>
 								<li><a href="checkout.html">log out</a></li>
 							</ul>
 						</div>
-
 					</details>
-
 				</div>
-
 			</div>
 			<!-- ********** </Правая часть ЗАГОЛОВКА> ********** -->
 
@@ -299,176 +277,11 @@
 			<span>Shop for items based on what we featured in this week</span>
 
 			<!-- Место под предметы -->
-			<div class="items-place">
-
-				<!-- 1 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/items-1.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /1 предмет -->
-
-				<!-- 2 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-2.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /2 предмет -->
-
-				<!-- 3 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-3.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /3 предмет -->
-
-
-				<!-- 4 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-4.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /4 предмет -->
-
-				<!-- 5 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-5.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /5 предмет -->
-
-				<!-- 6 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-6.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /6 предмет -->
-
-				<!-- 7 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-7.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /7 предмет -->
-
-				<!-- 8 предмет -->
-				<a href="single-page.html">
-					<div class="items">
-						<div class="img-style">
-							<div class="img-style-border">
-								<i class="fas fa-cart-arrow-down"></i>
-								<div class="add-to-cart">Add to Cart</div>
-							</div>
-						</div>
-
-						<img src="img/item-8.png" alt="item-1">
-
-						<div class="items-place-text-style">
-							<h3>Mango People T-shirt</h3>
-							<span>$52.00</span>
-						</div>
-					</div>
-				</a>
-				<!-- /8 предмет -->
-
-				<!-- ********** -->
-				<!-- Конец места под предметы -->
-			</div>
+			<div id="goods"></div>
 
 			<!-- Кнопка под предметами красная -->
 			<div class="browse-all-product">
-				<a href="#">Browse All Product
+				<a href="men.html">Browse All Product
 					<div class="arrow"></div>
 				</a>
 			</div>
@@ -747,7 +560,6 @@
 <!-- ********** </ПОДВАЛ> ********** -->
 
 <!--Scripts-->
-<script src="jquery/jquery-3.0.0.slim.min.js"></script>
 <script src="popper/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <!--Scripts-->
