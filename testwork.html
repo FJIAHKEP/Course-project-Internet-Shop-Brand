@@ -8,11 +8,6 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/product.js" defer></script>
-	<script src="js/ajaxProduct.js" defer></script>
-	<script src="js/ajaxCart.js" defer></script>
-	<script src="js/productBasket.js" defer></script>
-	<script src="js/events.js" defer></script>
 	<script src="js/cart.js" defer></script>
 
 
@@ -27,77 +22,46 @@
 </head>
 <body>
 <div class="header-right" style="position: absolute; right: 150px">
-
-	<details open="">
-
+	<div id="ballWithACounter">0</div>
+	<details>
 		<summary>
 			<i class="fas fa-shopping-cart fa-lg"></i>
 		</summary>
-
 		<div class="cart-box-items">
 			<div class="triangle-mega-menu"></div>
+			<!-- Сюда вставляем товары корзины -->
 			<div id="cart">
 
 			</div>
-			<!--<div class="product-in-cart">-->
-				<!--<div class="photo-cart-and-text-cart">-->
-					<!--<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>-->
-					<!--<div>-->
-						<!--<a href="#"><h2>REBOX ZANE</h2></a>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="close-boll"><span class="close"></span></div>-->
-			<!--</div>-->
-
-			<!--<div class="product-in-cart">-->
-				<!--<div class="photo-cart-and-text-cart">-->
-					<!--<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>-->
-					<!--<div>-->
-						<!--<a href="#"><h2>REBOX ZANE</h2></a>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="close-boll"><span class="close"></span></div>-->
-			<!--</div>-->
-
+			<!-- Сюда вставляем общую сумму товаров -->
 			<div class="total-cart-product">
 				<h2>total</h2>
-				<h2>$500.00</h2>
+				<h2 id="renderPrice"></h2>
 			</div>
-
 			<div class="button-cart-box">
 				<a href="checkout.html">checkout</a>
 				<a href="#">go to cart</a>
 			</div>
-
 		</div>
-
 	</details>
-
 	<div class="my-account">
-
 		<details>
-
 			<summary>
 				<span>My Account</span>
 				<i class="fas fa-caret-down"></i>
 			</summary>
-
 			<div>
 				<ul>
 					<li><a href="checkout.html">user</a></li>
 					<li><a href="checkout.html">log out</a></li>
 				</ul>
 			</div>
-
 		</details>
-
 	</div>
-
 </div>
 
 	<div class="container">
 		<div id="goods"></div>
-		<div class="items-place"></div>
 	</div>
 </body>
 </html>
