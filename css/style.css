@@ -10,9 +10,6 @@ body {
 a:hover {
   text-decoration: none; }
 
-html {
-  font-size: 8px; }
-
 /* внутренний контейнер указывает ширину и центризует */
 .container-women,
 .container {
