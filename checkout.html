@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery/jquery.inputmask.js"></script>
+	<script src="js/cart.js"></script>
+	<!-- <script src="js/registrationForm.js"></script> -->
 </head>
 
 <body>
@@ -74,70 +78,44 @@
 		<!-- ********** </Левая часть ЗАГОЛОВКА> ********** -->
 
 		<!-- ********** <Правая часть ЗАГОЛОВКА> ********** -->
-		<div class="header-right">
-
+		<!-- ********** <КОРЗИНА ТОВАРОВ> ********** -->
+		<div class="header-right" style="position: relative">
+			<div id="ballWithACounter">0</div>
 			<details>
-
 				<summary>
 					<i class="fas fa-shopping-cart fa-lg"></i>
 				</summary>
-
 				<div class="cart-box-items">
 					<div class="triangle-mega-menu"></div>
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
-					</div>
+					<!-- Сюда вставляем товары корзины -->
+					<div id="cart">
 
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
 					</div>
-
+					<!-- Сюда вставляем общую сумму товаров -->
 					<div class="total-cart-product">
 						<h2>total</h2>
-						<h2>$500.00</h2>
+						<h2 id="renderPrice"></h2>
 					</div>
-
 					<div class="button-cart-box">
 						<a href="checkout.html">checkout</a>
-						<a href="#">go to cart</a>
+						<a href="shopping-cart.html">go to cart</a>
 					</div>
-
 				</div>
-
 			</details>
-
 			<div class="my-account">
-
 				<details>
-
 					<summary>
 						<span>My Account</span>
 						<i class="fas fa-caret-down"></i>
 					</summary>
-
 					<div>
 						<ul>
 							<li><a href="checkout.html">user</a></li>
 							<li><a href="checkout.html">log out</a></li>
 						</ul>
 					</div>
-
 				</details>
-
 			</div>
-
 		</div>
 		<!-- ********** </Правая часть ЗАГОЛОВКА> ********** -->
 
@@ -979,41 +957,9 @@
 
 
 <!--Scripts-->
-<script src="jquery/jquery-3.0.0.slim.min.js"></script>
 <script src="popper/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <!--Scripts-->
-
-<!-- **** ФОРМА ОТПРАВКИ **** -->
-<div class="container-for-form">
-	<div class="formWrapperScreen"></div>
-	<div class="container-form">
-		<div class="closing-cross">X</div>
-		<form action="#">
-			<label class="lable-form-class" for="имени" id="loginLabel">Имя:</label>
-			<input type="text" name="имени" id="login" login-placeholder="enter your login name" class="field input-class bounce-this-label"
-						 autofocus>
-			<label class="lable-form-class" for="почты" id="emailLabel">Адрес почты:</label>
-			<input type="text" name="почты" id="email" email-placeholder="enter your email" class="field input-class bounce-this-label">
-			<label class="lable-form-class" for="телефона" id="phoneLabel">Телефон:</label>
-			<input type="text" name="телефона" id="phone" phone-placeholder="enter your phone number"
-						 class="field input-class bounce-this-label">
-			<label class="lable-form-class" for="дата" id="dateLabel">Год рождения:</label>
-			<input name="даты" type="text" id="date" date-placeholder="enter your date" class="field input-class-date">
-			<p><select id="cityList" name="city"></select></p>
-			<label class="lable-form-class" for="message">Ваше сообшение:</label>
-			<textarea class="ta-class" name="message" id="message" style="resize: none;" cols="30" rows="10"
-								spellcheck="false"></textarea>
-			<a class="submit-form" href="javascript:validate()">Отправить форму</a>
-		</form>
-	</div>
-</div>
-
-<script src="jquery/jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="js/registration-form.js"></script>
-<script src="regForm.js"></script>
 </body>
 
 </html>

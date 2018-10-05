@@ -8,6 +8,11 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery/jquery.inputmask.js"></script>
+	<script src="js/cart.js"></script>
+	<!-- <script src="js/registrationForm.js"></script> -->
+	<script src="js/shopping-cart.js"></script>
 </head>
 
 <body>
@@ -74,70 +79,44 @@
 		<!-- ********** </Левая часть ЗАГОЛОВКА> ********** -->
 
 		<!-- ********** <Правая часть ЗАГОЛОВКА> ********** -->
-		<div class="header-right">
-
+		<!-- ********** <КОРЗИНА ТОВАРОВ> ********** -->
+		<div class="header-right" style="position: relative">
+			<div id="ballWithACounter">0</div>
 			<details>
-
 				<summary>
 					<i class="fas fa-shopping-cart fa-lg"></i>
 				</summary>
-
 				<div class="cart-box-items">
 					<div class="triangle-mega-menu"></div>
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-1.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
-					</div>
+					<!-- Сюда вставляем товары корзины -->
+					<div id="cart">
 
-					<div class="product-in-cart">
-						<div class="photo-cart-and-text-cart">
-							<a href="#"><img src="img/product-in-cart-2.jpg" alt="you-choice"></a>
-							<div>
-								<a href="#"><h2>REBOX ZANE</h2></a>
-							</div>
-						</div>
-						<div class="close-boll"><span class="close"></span></div>
 					</div>
-
+					<!-- Сюда вставляем общую сумму товаров -->
 					<div class="total-cart-product">
 						<h2>total</h2>
-						<h2>$500.00</h2>
+						<h2 id="renderPrice"></h2>
 					</div>
-
 					<div class="button-cart-box">
 						<a href="checkout.html">checkout</a>
-						<a href="#">go to cart</a>
+						<a href="shopping-cart.html">go to cart</a>
 					</div>
-
 				</div>
-
 			</details>
-
 			<div class="my-account">
-
 				<details>
-
 					<summary>
 						<span>My Account</span>
 						<i class="fas fa-caret-down"></i>
 					</summary>
-
 					<div>
 						<ul>
 							<li><a href="checkout.html">user</a></li>
 							<li><a href="checkout.html">log out</a></li>
 						</ul>
 					</div>
-
 				</details>
-
 			</div>
-
 		</div>
 		<!-- ********** </Правая часть ЗАГОЛОВКА> ********** -->
 
@@ -261,133 +240,15 @@
 				</ul>
 			</div>
 
-			<div class="all-selected-in-the-cart">
-
-				<div class="selected-products">
-
-					<div class="photo-and-description">
-						<img src="img/product-details-1.jpg" alt="photo">
-						<div class="photo-and-description-color-size-together">
-							<h2>Mango People T-shirt</h2>
-
-							<div class="photo-and-description-color-size">
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Color:</h2>
-									<h3>Red</h3>
-								</div>
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Size:</h2>
-									<h3>Xll</h3>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="selected-products-unite-price">
-						<div><h2>$100</h2></div>
-					</div>
-					<div class="selected-products-quantity">
-						<input type="text" placeholder="1" oninput="this.value = this.value.replace(/\D/g, '')">
-					</div>
-					<div class="selected-products-shipping">FREE
-					</div>
-					<div class="selected-products-subtotal">
-						<div><h2>$300</h2></div>
-					</div>
-					<div class="selected-products-action">
-						<div class="close-boll"><span class="close"></span></div></div>
-				</div>
-
-				<div class="selected-products">
-
-					<div class="photo-and-description">
-						<img src="img/product-details-2.jpg" alt="photo">
-						<div class="photo-and-description-color-size-together">
-							<h2>Mango People T-shirt</h2>
-
-							<div class="photo-and-description-color-size">
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Color:</h2>
-									<h3>Red</h3>
-								</div>
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Size:</h2>
-									<h3>Xll</h3>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="selected-products-unite-price">
-						<div><h2>$100</h2></div>
-					</div>
-					<div class="selected-products-quantity">
-						<input type="text" placeholder="1" oninput="this.value = this.value.replace(/\D/g, '')">
-					</div>
-					<div class="selected-products-shipping">FREE
-					</div>
-					<div class="selected-products-subtotal">
-						<div><h2>$300</h2></div>
-					</div>
-					<div class="selected-products-action">
-						<div class="close-boll"><span class="close"></span></div></div>
-				</div>
-
-				<div class="selected-products">
-
-					<div class="photo-and-description">
-						<img src="img/product-details-3.jpg" alt="photo">
-						<div class="photo-and-description-color-size-together">
-							<h2>Mango People T-shirt</h2>
-
-							<div class="photo-and-description-color-size">
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Color:</h2>
-									<h3>Red</h3>
-								</div>
-
-								<div class="photo-and-description-color-size-box">
-									<h2>Size:</h2>
-									<h3>Xll</h3>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="selected-products-unite-price">
-						<div><h2>$100</h2></div>
-					</div>
-					<div class="selected-products-quantity">
-						<input type="text" placeholder="1" oninput="this.value = this.value.replace(/\D/g, '')">
-					</div>
-					<div class="selected-products-shipping">FREE
-					</div>
-					<div class="selected-products-subtotal">
-						<div><h2>$300</h2></div>
-					</div>
-					<div class="selected-products-action">
-						<div class="close-boll"><span class="close"></span></div></div>
-				</div>
-
-			</div>
+			<!-- ********** <КОРЗИНА СТРАНИЦА SHOPPING CART> ********** -->
+			<div id="shopping-cart" class="all-selected-in-the-cart"></div>
 
 			<div class="selected-products-2-button">
 				<div class="selected-products-button-left">
 					<a href="#">cLEAR SHOPPING CART</a>
 				</div>
 				<div class="selected-products-button-right">
-					<a href="#">cONTINUE sHOPPING</a>
+					<a href="men.html">cONTINUE sHOPPING</a>
 				</div>
 			</div>
 
@@ -418,11 +279,11 @@
 				<div class="grand-total">
 					<div class="sub-total-price">
 						<span>sub total</span>
-						<span>$900</span>
+						<span id="sub-total">$0.00</span>
 					</div>
 					<div class="grand-total-price">
 						<h3>grand total</h3>
-						<span>$900</span>
+						<span id="grand-total">$0.00</span>
 					</div>
 					<a href="#">proceed to checkout</a>
 				</div>
@@ -666,7 +527,6 @@
 <!-- ********** </ПОДВАЛ> ********** -->
 
 <!--Scripts-->
-<script src="jquery/jquery-3.0.0.slim.min.js"></script>
 <script src="popper/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <!--Scripts-->
