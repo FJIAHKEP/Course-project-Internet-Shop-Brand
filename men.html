@@ -8,10 +8,12 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<script src="jquery/jquery.inputmask.js"></script>
 	<script src="js/cart.js"></script>
-	<!-- <script src="js/registrationForm.js"></script> -->
+	<script src="js/priceSliderJQueryUI.js"></script>
 </head>
 
 <body>
@@ -368,13 +370,12 @@
 
 					<!-- **** <Выбор Цены ползунок> **** -->
 					<div class="price-choice">
-						<h2>price</h2>
-						<form action="#">
-
-							<input type="range">
-
-						</form>
-
+						<label for="wrapper-price-range">PRICE</label>
+						<div id="slider-range"></div>
+						<div class="wrapper-price-range" id="wrapper-price-range">
+							<input class="price-range" type="text" id="minPriceRange" readonly>
+							<input class="price-range" type="text" id="maxPriceRange" readonly>
+						</div>
 					</div>
 					<!-- **** </Выбор Цены ползунок> **** -->
 

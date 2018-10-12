@@ -7,6 +7,7 @@ function buildRegForm() {
 		id: 'wrapper-form'
 	});
 
+
 	// Форма
 	var $form = $('<form />', {
 		id: 'form'
@@ -24,13 +25,6 @@ function buildRegForm() {
 		top: '16px',
 		cursor: 'pointer'
 	});
-
-	$($wrapperForm,$close).on('click', function (event) {
-		if (event.target.id === 'wrapper-form' || event.target.id === 'close-form-btn'){
-			$wrapperForm.remove();
-		}
-	});
-
 
 	// Имя
 	var $name = $('<div />');
@@ -168,9 +162,16 @@ function buildRegForm() {
 	// Итог render
 	$wrapperForm.append($form);
 	$form.append($close, $name, $gender, $email, $phone, $country, $password, $button);
-	$('body').append($wrapperForm);
-
+	$('body').append($wrapperForm).addClass('stop-scrolling');
 	$("#user-phone").inputmask("+7(999)999-99-99");
+
+	$($wrapperForm,$close).on('click', function (event) {
+		if (event.target.id === 'wrapper-form' || event.target.id === 'close-form-btn'){
+			$('body').removeClass('stop-scrolling');
+			$wrapperForm.remove();
+		}
+	});
+
 }
 
 function validateRegForm() {
@@ -309,48 +310,8 @@ function validateRegForm() {
 
 (function ($) {
 	$(function () {
-		$('#goods').on('click', function () {
-			buildRegForm();
-			validateRegForm();
-			var $name = $('#user-name');
-			var $email = $('#user-email');
-			var $password1 = $('#user-password');
-			var $password2 = $('#user-password-return');
-
-			$('#form').on('submit', function (event) {
-				event.preventDefault();
-				if ($name.attr('data-valid') === 'true' &&
-					$email.attr('data-valid') === 'true' &&
-					$password1.attr('data-valid') === 'true' &&
-					$password2.attr('data-valid') === 'true') {
-					$.ajax({
-						url: 'http://localhost:3000/users',
-						type: 'POST',
-						headers: {
-							'content-type': 'application/json'
-						},
-						data: JSON.stringify({
-							name: $('#user-name[name]').val(),
-							sex: $('#gender>label>input[name = "sex"]:checked').val(),
-							email: $('#user-email[name]').val(),
-							phone: $('#user-phone[name]').val(),
-							city: $('#user-city[name]').val(),
-							userPassword: $('#user-password[name]').val()
-						}),
-						success: function () {
-							alert("Регистрация прошла успешно!");
-							$('#wrapper-form').remove();
-						}
-					})
-				} else if ($name.attr('data-valid') === 'false' || $name.attr('data-valid') === undefined &&
-					$email.attr('data-valid') === 'false' || $email.attr('data-valid') === undefined &&
-					$password1.attr('data-valid') === 'false' || $password1.attr('data-valid') === undefined &&
-					$password2.attr('data-valid') === 'false' || $password2.attr('data-valid') === undefined) {
-					$('[data-get]').css({
-						border: '2px solid red'
-					});
-				}
-			});
+		$('#select-the-continue-button').on('click', function () {
+			registerOrGuest();
 		});
 	})
 })(jQuery);
