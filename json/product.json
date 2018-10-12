@@ -1,20 +1,37 @@
 {
-  "authorization": [],
+  "authorization": [
+    {
+      "status": "online",
+      "id": 1,
+      "email": "dim4ii@yandex.ru"
+    }
+  ],
   "users": [
     {
       "name": "Dimitry",
       "sex": "мужской",
       "email": "dim4ii@yandex.ru",
-      "phone": "+7(444)444-44-44",
+      "phone": "",
       "city": "Москва",
       "userPassword": "123123",
+      "cart": [],
       "id": 1
+    },
+    {
+      "name": "Dimitry",
+      "sex": "мужской",
+      "email": "dim4ii@yandex.ru",
+      "phone": "",
+      "city": "Москва",
+      "userPassword": "123123",
+      "cart": [],
+      "id": 2
     }
   ],
   "cart": [
     {
       "id": "1",
-      "quantity": 1,
+      "quantity": 2,
       "image": "img/items-1.png",
       "productHref": "#",
       "brandProduct": "Brand",
@@ -24,7 +41,7 @@
     },
     {
       "id": "2",
-      "quantity": 1,
+      "quantity": 4,
       "image": "img/item-2.png",
       "productHref": "#",
       "brandProduct": "Brand",

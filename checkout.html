@@ -11,7 +11,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="jquery/jquery.inputmask.js"></script>
 	<script src="js/cart.js"></script>
-	<!-- <script src="js/registrationForm.js"></script> -->
+	<script src="js/registrationForm.js"></script>
+	<script src="js/registerOrGuest.js"></script>
+	<script src="js/authorization.js"></script>
 </head>
 
 <body>
@@ -246,11 +248,11 @@
 
 						<div class="radio-block">
 							<label>
-								<input type="radio" checked name="guest-or-register">
+								<input id="i-am-a-guest" value="i-am-a-guest" type="radio" name="guest-or-register">
 								<h2 class="style-222222-12-400">checkout as guest</h2>
 							</label>
 							<label>
-								<input type="radio" checked name="guest-or-register">
+								<input id="register-me" value="register-me" type="radio" name="guest-or-register">
 								<h2 class="style-222222-12-400">register</h2>
 							</label>
 						</div>
@@ -293,13 +295,13 @@
 
 						<form action="#">
 							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
+								<input id="login" type="email">
 							</lable>
 							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
+								<input id="password" type="password">
 							</lable>
 							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
+								<button id="enter-account" type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
 								<a href="#">Forgot Password?</a>
 							</div>
 						</form>
@@ -311,412 +313,22 @@
 			</details>
 			<details>
 				<summary>02. BILLING INFORMATION</summary>
-				<div class="box-cut-left-right">
-					<div class="shipping-adress-left-side">
-
-						<div class="shipping-text-block-1">
-
-							<h2 class="style-222222-13-400">
-								Check as a guest or register
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-
-						</div>
-
-						<div class="radio-block">
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">checkout as guest</h2>
-							</label>
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">register</h2>
-							</label>
-						</div>
-
-						<div class="shipping-text-block-2">
-							<h2 class="style-222222-13-400">
-								register and save time!
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Fast and easy checkout
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Easy access to your order history and status
-							</p>
-						</div>
-
-						<a href="#">Continue</a>
-
-					</div>
-
-					<div class="shipping-adress-right-side">
-						<div class="shipping-text-block-right-1">
-							<h2 class="style-222222-13-400">Already registed?</h2>
-							<p class="style-b3b2b2-13-400">Please log in below</p>
-						</div>
-
-						<form action="#">
-							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
-							</lable>
-							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
-							</lable>
-							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
-								<a href="#">Forgot Password?</a>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
 
 			</details>
 			<details>
 				<summary>03. SHIPPING INFORMATION</summary>
-				<div class="box-cut-left-right">
-					<div class="shipping-adress-left-side">
-
-						<div class="shipping-text-block-1">
-
-							<h2 class="style-222222-13-400">
-								Check as a guest or register
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-
-						</div>
-
-						<div class="radio-block">
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">checkout as guest</h2>
-							</label>
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">register</h2>
-							</label>
-						</div>
-
-						<div class="shipping-text-block-2">
-							<h2 class="style-222222-13-400">
-								register and save time!
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Fast and easy checkout
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Easy access to your order history and status
-							</p>
-						</div>
-
-						<a href="#">Continue</a>
-
-					</div>
-
-					<div class="shipping-adress-right-side">
-						<div class="shipping-text-block-right-1">
-							<h2 class="style-222222-13-400">Already registed?</h2>
-							<p class="style-b3b2b2-13-400">Please log in below</p>
-						</div>
-
-						<form action="#">
-							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
-							</lable>
-							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
-							</lable>
-							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
-								<a href="#">Forgot Password?</a>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
 
 			</details>
 			<details>
 				<summary>04. SHIPPING METHOD</summary>
-				<div class="box-cut-left-right">
-					<div class="shipping-adress-left-side">
-
-						<div class="shipping-text-block-1">
-
-							<h2 class="style-222222-13-400">
-								Check as a guest or register
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-
-						</div>
-
-						<div class="radio-block">
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">checkout as guest</h2>
-							</label>
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">register</h2>
-							</label>
-						</div>
-
-						<div class="shipping-text-block-2">
-							<h2 class="style-222222-13-400">
-								register and save time!
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Fast and easy checkout
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Easy access to your order history and status
-							</p>
-						</div>
-
-						<a href="#">Continue</a>
-
-					</div>
-
-					<div class="shipping-adress-right-side">
-						<div class="shipping-text-block-right-1">
-							<h2 class="style-222222-13-400">Already registed?</h2>
-							<p class="style-b3b2b2-13-400">Please log in below</p>
-						</div>
-
-						<form action="#">
-							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
-							</lable>
-							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
-							</lable>
-							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
-								<a href="#">Forgot Password?</a>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
 
 			</details>
 			<details>
 				<summary>05. PAYMENT METHOD</summary>
-				<div class="box-cut-left-right">
-					<div class="shipping-adress-left-side">
-
-						<div class="shipping-text-block-1">
-
-							<h2 class="style-222222-13-400">
-								Check as a guest or register
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-
-						</div>
-
-						<div class="radio-block">
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">checkout as guest</h2>
-							</label>
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">register</h2>
-							</label>
-						</div>
-
-						<div class="shipping-text-block-2">
-							<h2 class="style-222222-13-400">
-								register and save time!
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Fast and easy checkout
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Easy access to your order history and status
-							</p>
-						</div>
-
-						<a href="#">Continue</a>
-
-					</div>
-
-					<div class="shipping-adress-right-side">
-						<div class="shipping-text-block-right-1">
-							<h2 class="style-222222-13-400">Already registed?</h2>
-							<p class="style-b3b2b2-13-400">Please log in below</p>
-						</div>
-
-						<form action="#">
-							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
-							</lable>
-							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
-							</lable>
-							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
-								<a href="#">Forgot Password?</a>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
 
 			</details>
 			<details>
 				<summary>06. ORDER REVIEW</summary>
-				<div class="box-cut-left-right">
-					<div class="shipping-adress-left-side">
-
-						<div class="shipping-text-block-1">
-
-							<h2 class="style-222222-13-400">
-								Check as a guest or register
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-
-						</div>
-
-						<div class="radio-block">
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">checkout as guest</h2>
-							</label>
-							<label>
-								<input type="radio" checked name="guest-or-register">
-								<h2 class="style-222222-12-400">register</h2>
-							</label>
-						</div>
-
-						<div class="shipping-text-block-2">
-							<h2 class="style-222222-13-400">
-								register and save time!
-							</h2>
-
-							<p class="style-b3b2b2-13-400">
-								Register with us for future convenience
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Fast and easy checkout
-							</p>
-						</div>
-
-						<div class="befor-double-arrow">
-							<i class="fas fa-angle-double-right"></i>
-
-							<p class="style-b3b2b2-13-400">
-								Easy access to your order history and status
-							</p>
-						</div>
-
-						<a href="#">Continue</a>
-
-					</div>
-
-					<div class="shipping-adress-right-side">
-						<div class="shipping-text-block-right-1">
-							<h2 class="style-222222-13-400">Already registed?</h2>
-							<p class="style-b3b2b2-13-400">Please log in below</p>
-						</div>
-
-						<form action="#">
-							<lable><h2 class="style-222222-13-400">EMAIL ADDRESS</h2>
-								<input type="email">
-							</lable>
-							<lable><H2 class="style-222222-13-400">PASSWORD</H2>
-								<input type="password">
-							</lable>
-							<div>
-								<button type="submit"><h2 class="style-222222-13-400">LOG IN</h2></button>
-								<a href="#">Forgot Password?</a>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
 
 			</details>
 		</div>
